@@ -25,8 +25,9 @@ Gunakan **menu kiri** untuk navigasi (situs ini dihasilkan dengan [MkDocs Materi
 
 ## Jalankan dokumentasi secara lokal
 
+Dari **root repositori** ini (folder yang sama dengan `mkdocs.yml`):
+
 ```bash
-cd folder-root-proyek-ini
 pip install -r requirements-docs.txt
 mkdocs serve
 ```

@@ -1,0 +1,79 @@
+# Repo: https://github.com/maulana222/socx-api-documentation
+# Jalankan dari folder ini:  mkdocs serve
+
+site_name: Dokumentasi API SOCX
+site_description: Integrasi H2H Reseller — direct purchase, saldo, status, kode respons
+site_author: SOCX
+
+repo_url: https://github.com/maulana222/socx-api-documentation
+edit_uri: edit/main/doc/
+
+docs_dir: doc
+
+theme:
+  name: material
+  language: id
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Mode gelap
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Mode terang
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - navigation.sections
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+nav:
+  - Beranda: index.md
+  - Pengenalan: 01-pengenalan.md
+  - Persiapan integrasi: 02-persiapan-integrasi.md
+  - Transaksi — Direct purchase:
+      - Ringkasan: transaksi-direct/README.md
+      - Cek saldo: transaksi-direct/cek-saldo.md
+      - Pembelian JSON (POST): transaksi-direct/pembelian-json-post.md
+      - Pembelian HTTP: transaksi-direct/pembelian-http.md
+      - Pembelian XML: transaksi-direct/pembelian-xml.md
+      - Cek status: transaksi-direct/cek-status.md
+      - Kode respons (RC): transaksi-direct/kode-respons.md
+      - Contoh respons — pulsa: transaksi-direct/contoh-respons-pulsa.md
+      - Contoh respons — produk game: transaksi-direct/contoh-respons-produk-game.md
+      - Skenario pengujian: transaksi-direct/skenario-pengujian.md
+  - Inquiry & katalog (menyusul): inquiry/README.md
+  - Lampiran — deposit tiket: appendix-deposit-ticket.md
+
+extra:
+  generator: false
