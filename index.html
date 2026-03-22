@@ -12,11 +12,9 @@
         <meta name="author" content="SOCX">
       
       
-        <link rel="canonical" href="https://maulana222.github.io/socx-api-documentation/">
       
       
-      
-        <link rel="next" href="deploy-github-pages/">
+        <link rel="next" href="01-pengenalan/">
       
       
         
@@ -344,17 +342,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deploy-situs-ringkas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deploy situs (ringkas)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#status-dokumen" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -365,48 +352,10 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#repositori-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Repositori GitHub
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="deploy-github-pages/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Deploy ke GitHub Pages
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -511,7 +460,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -533,14 +482,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -914,32 +863,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deploy-situs-ringkas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deploy situs (ringkas)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#status-dokumen" class="md-nav__link">
     <span class="md-ellipsis">
       
         Status dokumen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#repositori-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Repositori GitHub
       
     </span>
   </a>
@@ -1028,15 +955,11 @@
 </tr>
 <tr>
 <td><a href="inquiry/">Inquiry &amp; katalog produk</a></td>
-<td><strong>Menyusul</strong> — koordinasi Pak Leo</td>
+<td><strong>Menyusul</strong> — menunggu kontrak dari tim SOCX</td>
 </tr>
 <tr>
 <td><a href="appendix-deposit-ticket/">Lampiran — deposit tiket</a></td>
 <td>Di luar direct purchase; dari spesifikasi sumber</td>
-</tr>
-<tr>
-<td><a href="deploy-github-pages/">Deploy ke GitHub Pages</a></td>
-<td>Memublikasikan situs dokumentasi statis</td>
 </tr>
 </tbody>
 </table>
@@ -1046,16 +969,11 @@
 mkdocs<span class="w"> </span>serve
 </code></pre></div>
 <p>Buka <code>http://127.0.0.1:8000</code> di browser.</p>
-<h2 id="deploy-situs-ringkas">Deploy situs (ringkas)<a class="headerlink" href="#deploy-situs-ringkas" title="Permanent link">&para;</a></h2>
-<p>Untuk memasang dokumentasi di <strong>GitHub Pages</strong>, ikuti panduan langkah demi langkah: <strong><a href="deploy-github-pages/">Deploy ke GitHub Pages</a></strong>.</p>
-<p>Perintah utama setelah pengaturan sekali di GitHub: <code>mkdocs gh-deploy</code>.</p>
 <h2 id="status-dokumen">Status dokumen<a class="headerlink" href="#status-dokumen" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Siap dipakai untuk integrasi:</strong> direct purchase (JSON/HTTP/XML), cek saldo, cek status, tabel RC — sesuai sumber internal <code>socx.md</code>.</li>
-<li><strong>Perlu review Pak Leo / tim API:</strong> callback setelah <code>rc = 68</code> (pending), verifikasi webhook/XML <code>topUpReport</code>, URL &amp; kontrak <strong>inquiry</strong> / daftar harga, kode produk resmi untuk game.</li>
+<li><strong>Perlu review tim SOCX / API:</strong> callback setelah <code>rc = 68</code> (pending), verifikasi webhook/XML <code>topUpReport</code>, URL &amp; kontrak <strong>inquiry</strong> / daftar harga, kode produk resmi untuk game.</li>
 </ul>
-<h2 id="repositori-github">Repositori GitHub<a class="headerlink" href="#repositori-github" title="Permanent link">&para;</a></h2>
-<p>Sesuaikan <code>repo_url</code> (dan opsional <code>site_url</code>) di <code>mkdocs.yml</code> agar tautan di header situs dan URL kanonik sesuai repositori Anda.</p>
 
 
 

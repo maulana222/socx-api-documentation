@@ -12,8 +12,6 @@
         <meta name="author" content="SOCX">
       
       
-        <link rel="canonical" href="https://maulana222.github.io/socx-api-documentation/transaksi-direct/contoh-respons-pulsa/">
-      
       
         <link rel="prev" href="../kode-respons/">
       
@@ -291,33 +289,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deploy-github-pages/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Deploy ke GitHub Pages
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../01-pengenalan/" class="md-nav__link">
         
   
@@ -411,7 +382,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -433,14 +404,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1068,7 +1039,7 @@
 </table>
 <p><strong>Langkah integrator:</strong> panggil <a href="../cek-status/"><code>POST /status</code></a> dengan <code>request_id</code> yang sama, atau tunggu notifikasi server-ke-server jika sudah disepakati (<strong>TBD</strong>).</p>
 <h2 id="skenario-b-sukses-rc-00-contoh-spesifikasi">Skenario B — Sukses (<code>rc = 00</code>) — contoh spesifikasi<a class="headerlink" href="#skenario-b-sukses-rc-00-contoh-spesifikasi" title="Permanent link">&para;</a></h2>
-<p><strong>Catatan:</strong> Contoh di bawah menggambarkan bentuk respons yang <strong>diharapkan</strong> integrator; sesuaikan dengan respons real dari API setelah transaksi final (validasi dengan tim SOCX / Pak Leo).</p>
+<p><strong>Catatan:</strong> Contoh di bawah menggambarkan bentuk respons yang <strong>diharapkan</strong> integrator; sesuaikan dengan respons real dari API setelah transaksi final (validasi dengan tim SOCX).</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HSA5&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;msisdn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;08121231231&quot;</span><span class="p">,</span>
@@ -1136,7 +1107,7 @@
   F --&gt;|00| C
   F --&gt;|gagal| E</code></pre>
 <h2 id="daftar-kode-produk-pulsa">Daftar kode produk pulsa<a class="headerlink" href="#daftar-kode-produk-pulsa" title="Permanent link">&para;</a></h2>
-<p><strong>TBD:</strong> Daftar resmi <code>code</code> (per operator / denom) akan masuk halaman <a href="../../inquiry/">Inquiry</a> setelah ada URL/kontrak dari Pak Leo. Untuk uji awal gunakan kode yang diberikan tim SOCX untuk sandbox.</p>
+<p><strong>TBD:</strong> Daftar resmi <code>code</code> (per operator / denom) akan masuk halaman <a href="../../inquiry/">Inquiry</a> setelah ada URL/kontrak dari tim SOCX. Untuk uji awal gunakan kode yang diberikan tim SOCX untuk sandbox.</p>
 
 
 
