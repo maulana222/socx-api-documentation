@@ -15,7 +15,8 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 | Contoh respons pulsa & game | Tersedia | Skenario + interpretasi field |
 | Skenario pengujian | Tersedia | Checklist QA integrasi |
 | Deposit tiket | Lampiran | Di luar fokus direct purchase |
-| Inquiry / daftar harga / katalog | Menyusul | Menunggu kontrak & URL dari tim API |
+| Inquiry (`POST /inquiry`) | Tersedia (contoh) | PLN prabayar `CPLN` — host demo/production di dokumen |
+| Daftar harga / katalog lengkap | Menyusul | Perlu daftar `code` resmi dari tim API |
 
 ---
 
@@ -88,7 +89,8 @@ Diagram dan skenario detail: [doc/transaksi-direct/contoh-respons-pulsa.md](doc/
     ├── 02-persiapan-integrasi.md
     ├── appendix-deposit-ticket.md
     ├── inquiry/
-    │   └── README.md         ← Placeholder inquiry / katalog
+    │   ├── README.md
+    │   └── inquiry-post.md   ← POST /inquiry (contoh PLN)
     └── transaksi-direct/     ← Direct purchase, RC, contoh, uji
 ```
 
@@ -120,14 +122,15 @@ Buka browser ke **http://127.0.0.1:8000** — navigasi kiri, pencarian, dan peny
 - [Kode respons (RC) lengkap](doc/transaksi-direct/kode-respons.md)
 - [Contoh respons — pulsa](doc/transaksi-direct/contoh-respons-pulsa.md)
 - [Contoh respons — produk game](doc/transaksi-direct/contoh-respons-produk-game.md)
-- [Inquiry & katalog (menyusul)](doc/inquiry/README.md)
+- [Inquiry — ringkasan](doc/inquiry/README.md)
+- [Inquiry POST (JSON), contoh PLN](doc/inquiry/inquiry-post.md)
 
 ---
 
 ## Status & review
 
 - Materi utama diselaraskan dengan spesifikasi internal API H2H SOCX.
-- Bagian yang masih perlu **konfirmasi tim SOCX / API** antara lain: format error HTTP, URL sandbox, kontrak callback setelah pending, daftar kode produk resmi (terutama game), serta dokumentasi inquiry ketika endpoint tersedia.
+- Bagian yang masih perlu **konfirmasi tim SOCX / API** antara lain: format error HTTP, URL sandbox, kontrak callback setelah pending, daftar kode produk resmi (terutama game), serta perluasan inquiry per produk selain contoh PLN.
 
 Saran kontribusi: kirim **Pull Request** untuk perbaikan teks, contoh request/response terbaru dari UAT, atau pengisian tabel SKU di halaman produk game setelah ada data resmi.
 

@@ -72,7 +72,9 @@ nav:
       - Contoh respons — pulsa: transaksi-direct/contoh-respons-pulsa.md
       - Contoh respons — produk game: transaksi-direct/contoh-respons-produk-game.md
       - Skenario pengujian: transaksi-direct/skenario-pengujian.md
-  - Inquiry & katalog (menyusul): inquiry/README.md
+  - Inquiry:
+      - Ringkasan: inquiry/README.md
+      - Inquiry POST (JSON): inquiry/inquiry-post.md
   - Lampiran — deposit tiket: appendix-deposit-ticket.md
 
 extra:

@@ -20,7 +20,7 @@ Gunakan **menu kiri** untuk navigasi (situs ini dihasilkan dengan [MkDocs Materi
 | → [Contoh respons — pulsa](transaksi-direct/contoh-respons-pulsa.md) | Payload & respons spesifik pulsa |
 | → [Contoh respons — produk game](transaksi-direct/contoh-respons-produk-game.md) | Konvensi field & contoh (tanpa inquiry) |
 | → [Skenario pengujian](transaksi-direct/skenario-pengujian.md) | Checklist QA integrasi |
-| [Inquiry & katalog produk](inquiry/README.md) | **Menyusul** — menunggu kontrak dari tim SOCX |
+| [Inquiry](inquiry/README.md) | `POST /inquiry` — contoh PLN prabayar (`CPLN`) |
 | [Lampiran — deposit tiket](appendix-deposit-ticket.md) | Di luar direct purchase; dari spesifikasi sumber |
 
 ## Jalankan dokumentasi secara lokal

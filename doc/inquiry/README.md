@@ -1,43 +1,30 @@
-# Inquiry & katalog produk
+# Inquiry & katalog
 
-Bagian ini **belum ditulis** secara penuh karena menunggu:
+Bagian ini mendokumentasikan endpoint **inquiry** (cek data pelanggan / informasi produk sebelum transaksi) dan akan diperluas untuk katalog produk lain jika tersedia.
 
-- URL endpoint inquiry (jika sudah ada di backend, bisa langsung didokumentasikan di sini).
-- Kontrak request/response dari **tim SOCX** (daftar harga, list game/pulsa, format filter, dll.).
+## Isi
 
-## Yang akan dimuat di sini (rencana)
+| Halaman | Keterangan |
+|---------|------------|
+| [Inquiry POST (JSON)](inquiry-post.md) | `POST /inquiry` — contoh **PLN Prabayar** (`CPLN`), request/response, cURL. |
 
-1. **Persiapan** — parameter auth, rate limit (**TBD**)
-2. **Daftar produk / harga** — mapping ke field `code` untuk `POST /purchase`
-3. **Kategori** — pulsa, game, e-wallet, dll. sesuai produk SOCX
-4. **Contoh respons** — JSON konsisten untuk integrator
+## Autentikasi & jaringan
 
-## Jika URL inquiry sudah tersedia
+Sama seperti API reseller lainnya:
 
-Anda dapat menambahkan file baru di folder ini, misalnya:
+- Header **`Authorization: Bearer <JWT>`**
+- **Whitelist IP** untuk H2H production (lihat [Persiapan integrasi](../02-persiapan-integrasi.md))
 
-- `inquiry/daftar-harga.md`
-- `inquiry/list-produk-game.md`
+## Alur disarankan
 
-dengan template:
+1. **Inquiry** → validasi pelanggan / ambil info tampilan (`info[]`).
+2. **Purchase** → gunakan `code` yang sesuai dan field tujuan (`msisdn` atau setara) sesuai [pembelian JSON](../transaksi-direct/pembelian-json-post.md).
 
-```markdown
-## Endpoint
-- Method:
-- URL:
+## Menyusul
 
-## Request
-| Field | Tipe | Wajib |
-
-## Response
-Contoh JSON ...
-
-## Catatan
-Review internal — tanggal ___
-```
-
-Setelah itu ajukan **Pull Request** untuk review tim sebelum publikasi.
+- Daftar lengkap `code` inquiry per kategori (game, pulsa, e-wallet, dll.) — dari tim SOCX.
+- Varian response untuk produk non-PLN.
 
 ## Link ke transaksi
 
-Setelah mendapat `code` dari inquiry, gunakan [direct purchase — JSON POST](../transaksi-direct/pembelian-json-post.md).
+Setelah inquiry, lanjut ke [direct purchase — JSON POST](../transaksi-direct/pembelian-json-post.md).
