@@ -30,7 +30,7 @@ Disarankan: prefix lingkungan + timestamp + random, contoh `STG-20250322-abc12`.
 |------------|----------|---------|
 | Production (contoh dokumen) | `https://indotechapi.socx.app/reseller/api/v1` | Sesuai `socx.md` |
 
-**TBD:** URL sandbox / UAT dan kredensial uji — konfirmasi ke tim SOCX atau Pak Leo.
+**TBD:** URL sandbox / UAT dan kredensial uji — konfirmasi ke tim SOCX.
 
 ## 5. HTTPS
 
@@ -38,4 +38,4 @@ Selalu gunakan **HTTPS** untuk semua panggilan API.
 
 ## 6. Yang akan menyusul (inquiry)
 
-Daftar harga / katalog produk / **inquiry**  [inquiry](inquiry/README.md).
+Daftar harga / katalog produk / **inquiry** — tunggu URL dan kontrak dari tim SOCX, lalu tambahkan halaman di folder [inquiry](inquiry/README.md).

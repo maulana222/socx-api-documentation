@@ -82,12 +82,8 @@ Diagram dan skenario detail: [doc/transaksi-direct/contoh-respons-pulsa.md](doc/
 ├── mkdocs.yml                ← Konfigurasi situs dokumentasi (Material)
 ├── requirements-docs.txt     ← Dependensi Python untuk MkDocs
 ├── .gitignore                ← Mengabaikan site/, venv, dll.
-├── .github/
-│   └── workflows/
-│       └── deploy-docs.yml   ← Opsional: deploy otomatis ke gh-pages
 └── doc/                      ← Sumber Markdown (isi situs)
     ├── index.md              ← Beranda dokumentasi (daftar isi)
-    ├── deploy-github-pages.md
     ├── 01-pengenalan.md
     ├── 02-persiapan-integrasi.md
     ├── appendix-deposit-ticket.md
@@ -126,24 +122,6 @@ Output di `site/` (biasanya di `.gitignore`).
 
 ---
 
-## Deploy ke GitHub Pages (situs statis)
-
-Panduan **langkah demi langkah** (prasyarat, `mkdocs gh-deploy`, pengaturan *Settings → Pages*, URL publik, opsi GitHub Actions) ada di:
-
-**[doc/deploy-github-pages.md](doc/deploy-github-pages.md)**
-
-Ringkasan cepat:
-
-1. Dari root repo: `pip install -r requirements-docs.txt`
-2. Uji: `mkdocs build`
-3. Deploy: `mkdocs gh-deploy` (membuat/memperbarui branch **`gh-pages`**)
-4. Di GitHub: **Settings → Pages → Source** = branch **`gh-pages`**, folder **`/ (root)`**
-5. Buka: `https://<username>.github.io/<nama-repo>/` (tunggu beberapa menit setelah deploy pertama)
-
-Sesuaikan `site_url` di `mkdocs.yml` jika username atau nama repo berbeda.
-
----
-
 ## Konten per topik (tautan langsung)
 
 - [Ringkasan transaksi direct purchase](doc/transaksi-direct/README.md)
@@ -158,7 +136,7 @@ Sesuaikan `site_url` di `mkdocs.yml` jika username atau nama repo berbeda.
 ## Status & review
 
 - Materi utama diselaraskan dengan spesifikasi internal API H2H SOCX.
-- Bagian yang masih perlu **konfirmasi tim API / Pak Leo** antara lain: format error HTTP, URL sandbox, kontrak callback setelah pending, daftar kode produk resmi (terutama game), serta dokumentasi inquiry ketika endpoint tersedia.
+- Bagian yang masih perlu **konfirmasi tim SOCX / API** antara lain: format error HTTP, URL sandbox, kontrak callback setelah pending, daftar kode produk resmi (terutama game), serta dokumentasi inquiry ketika endpoint tersedia.
 
 Saran kontribusi: kirim **Pull Request** untuk perbaikan teks, contoh request/response terbaru dari UAT, atau pengisian tabel SKU di halaman produk game setelah ada data resmi.
 

@@ -3,7 +3,7 @@
 Bagian ini **belum ditulis** secara penuh karena menunggu:
 
 - URL endpoint inquiry (jika sudah ada di backend, bisa langsung didokumentasikan di sini).
-- Kontrak request/response dari **Pak Leo** (daftar harga, list game/pulsa, format filter, dll.).
+- Kontrak request/response dari **tim SOCX** (daftar harga, list game/pulsa, format filter, dll.).
 
 ## Yang akan dimuat di sini (rencana)
 
@@ -12,7 +12,7 @@ Bagian ini **belum ditulis** secara penuh karena menunggu:
 3. **Kategori** — pulsa, game, e-wallet, dll. sesuai produk SOCX
 4. **Contoh respons** — JSON konsisten untuk integrator
 
-## Jika URL sudah tersedia sebelum Pak Leo
+## Jika URL inquiry sudah tersedia
 
 Anda dapat menambahkan file baru di folder ini, misalnya:
 
@@ -33,10 +33,10 @@ dengan template:
 Contoh JSON ...
 
 ## Catatan
-Review: Pak Leo — tanggal ___
+Review internal — tanggal ___
 ```
 
-Setelah itu kirim **PR / link** ke Pak Leo untuk review sebelum publish publik.
+Setelah itu ajukan **Pull Request** untuk review tim sebelum publikasi.
 
 ## Link ke transaksi
 

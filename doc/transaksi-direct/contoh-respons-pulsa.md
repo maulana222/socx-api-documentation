@@ -45,7 +45,7 @@ Transaksi diterima; biller masih memproses.
 
 ## Skenario B — Sukses (`rc = 00`) — contoh spesifikasi
 
-**Catatan:** Contoh di bawah menggambarkan bentuk respons yang **diharapkan** integrator; sesuaikan dengan respons real dari API setelah transaksi final (validasi dengan tim SOCX / Pak Leo).
+**Catatan:** Contoh di bawah menggambarkan bentuk respons yang **diharapkan** integrator; sesuaikan dengan respons real dari API setelah transaksi final (validasi dengan tim SOCX).
 
 ```json
 {
@@ -115,4 +115,4 @@ flowchart TD
 
 ## Daftar kode produk pulsa
 
-**TBD:** Daftar resmi `code` (per operator / denom) akan masuk halaman [Inquiry](../inquiry/README.md) setelah ada URL/kontrak dari Pak Leo. Untuk uji awal gunakan kode yang diberikan tim SOCX untuk sandbox.
+**TBD:** Daftar resmi `code` (per operator / denom) akan masuk halaman [Inquiry](../inquiry/README.md) setelah ada URL/kontrak dari tim SOCX. Untuk uji awal gunakan kode yang diberikan tim SOCX untuk sandbox.

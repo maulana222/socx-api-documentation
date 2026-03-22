@@ -82,7 +82,7 @@ Jika biller mengembalikan setara `07` / `12` / `13`, bentuk JSON mengikuti pola 
 
 ## “List game”
 
-- **Bukan bagian endpoint purchase:** daftar SKU game / denom diharapkan dari **inquiry / API katalog** (menyusul, Pak Leo).
+- **Bukan bagian endpoint purchase:** daftar SKU game / denom diharapkan dari **inquiry / API katalog** (menyusul, dari tim SOCX).
 - Dokumen ini hanya menjamin **kontrak respons transaksi** konsisten dengan pulsa; variasi isi `sn` dan `message` per produk didokumentasikan per SKU setelah katalog tersedia.
 
 ## Tabel checklist per SKU game (untuk diisi tim produk)
@@ -91,4 +91,4 @@ Jika biller mengembalikan setara `07` / `12` / `13`, bentuk JSON mengikuti pola 
 |--------|-------------|-----------------|----------------------|---------|
 | *TBD* | *TBD* | *TBD* | *TBD* | |
 
-Salin tabel ini ke spreadsheet internal dan isi bersama Pak Leo agar integrator punya **spesifikasi reply tertentu** per game.
+Salin tabel ini ke spreadsheet internal dan lengkapi bersama tim produk/API agar integrator punya **spesifikasi reply tertentu** per game.

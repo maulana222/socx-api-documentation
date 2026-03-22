@@ -138,7 +138,7 @@ Spesifikasi sumber menyertakan contoh **`topUpReport`** (bukan request dari rese
 </methodCall>
 ```
 
-**Wajib diklarifikasi ke Pak Leo / tim API:**
+**Wajib diklarifikasi ke tim SOCX / API:**
 
 - URL endpoint di sisi **Anda** yang menerima `topUpReport`
 - Metode autentikasi (IP whitelist, signature, basic auth, dll.)

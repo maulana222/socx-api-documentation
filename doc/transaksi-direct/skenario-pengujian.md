@@ -55,7 +55,7 @@ Checklist untuk QA sebelum production. Sesuaikan dengan **sandbox** begitu URL &
 | C1 | Server SOCX POST `topUpReport` ke URL Anda | Badan sesuai contoh XML; HTTP 200 dari Anda |
 | C2 | Duplikasi callback untuk `REQUESTID` sama | Idempotent di sisi Anda (tidak dobel kredit user) |
 
-Isi baris C1–C2 setelah Pak Leo menetapkan URL, auth, dan retry policy.
+Isi baris C1–C2 setelah tim API menetapkan URL, auth, dan retry policy.
 
 ## 8. Regression cepat (smoke)
 
@@ -68,4 +68,4 @@ Urutan minimal sebelum rilis integrasi:
 
 ---
 
-**Untuk owner:** serahkan dokumen ini ke Pak Leo dengan pertanyaan terbuka: sandbox URL, format error HTTP, kontrak callback, dan daftar `code` untuk tabel pengujian G2.
+**Untuk owner:** serahkan dokumen ini ke tim API dengan pertanyaan terbuka: sandbox URL, format error HTTP, kontrak callback, dan daftar `code` untuk tabel pengujian G2.

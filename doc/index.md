@@ -20,9 +20,8 @@ Gunakan **menu kiri** untuk navigasi (situs ini dihasilkan dengan [MkDocs Materi
 | → [Contoh respons — pulsa](transaksi-direct/contoh-respons-pulsa.md) | Payload & respons spesifik pulsa |
 | → [Contoh respons — produk game](transaksi-direct/contoh-respons-produk-game.md) | Konvensi field & contoh (tanpa inquiry) |
 | → [Skenario pengujian](transaksi-direct/skenario-pengujian.md) | Checklist QA integrasi |
-| [Inquiry & katalog produk](inquiry/README.md) | **Menyusul** — koordinasi Pak Leo |
+| [Inquiry & katalog produk](inquiry/README.md) | **Menyusul** — menunggu kontrak dari tim SOCX |
 | [Lampiran — deposit tiket](appendix-deposit-ticket.md) | Di luar direct purchase; dari spesifikasi sumber |
-| [Deploy ke GitHub Pages](deploy-github-pages.md) | Memublikasikan situs dokumentasi statis |
 
 ## Jalankan dokumentasi secara lokal
 
@@ -35,16 +34,10 @@ mkdocs serve
 
 Buka `http://127.0.0.1:8000` di browser.
 
-## Deploy situs (ringkas)
-
-Untuk memasang dokumentasi di **GitHub Pages**, ikuti panduan langkah demi langkah: **[Deploy ke GitHub Pages](deploy-github-pages.md)**.
-
-Perintah utama setelah pengaturan sekali di GitHub: `mkdocs gh-deploy`.
-
 ## Status dokumen
 
 - **Siap dipakai untuk integrasi:** direct purchase (JSON/HTTP/XML), cek saldo, cek status, tabel RC — sesuai sumber internal `socx.md`.
-- **Perlu review Pak Leo / tim API:** callback setelah `rc = 68` (pending), verifikasi webhook/XML `topUpReport`, URL & kontrak **inquiry** / daftar harga, kode produk resmi untuk game.
+- **Perlu review tim SOCX / API:** callback setelah `rc = 68` (pending), verifikasi webhook/XML `topUpReport`, URL & kontrak **inquiry** / daftar harga, kode produk resmi untuk game.
 
 ## Repositori GitHub
 

@@ -60,7 +60,6 @@ plugins:
 
 nav:
   - Beranda: index.md
-  - Deploy ke GitHub Pages: deploy-github-pages.md
   - Pengenalan: 01-pengenalan.md
   - Persiapan integrasi: 02-persiapan-integrasi.md
   - Transaksi — Direct purchase:
