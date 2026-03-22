@@ -22,6 +22,7 @@ Gunakan **menu kiri** untuk navigasi (situs ini dihasilkan dengan [MkDocs Materi
 | → [Skenario pengujian](transaksi-direct/skenario-pengujian.md) | Checklist QA integrasi |
 | [Inquiry & katalog produk](inquiry/README.md) | **Menyusul** — koordinasi Pak Leo |
 | [Lampiran — deposit tiket](appendix-deposit-ticket.md) | Di luar direct purchase; dari spesifikasi sumber |
+| [Deploy ke GitHub Pages](deploy-github-pages.md) | Memublikasikan situs dokumentasi statis |
 
 ## Jalankan dokumentasi secara lokal
 
@@ -34,13 +35,11 @@ mkdocs serve
 
 Buka `http://127.0.0.1:8000` di browser.
 
-## Deploy (GitHub Pages)
+## Deploy situs (ringkas)
 
-```bash
-mkdocs gh-deploy
-```
+Untuk memasang dokumentasi di **GitHub Pages**, ikuti panduan langkah demi langkah: **[Deploy ke GitHub Pages](deploy-github-pages.md)**.
 
-(Sesuaikan branch remote; atau build `mkdocs build` dan unggah isi folder `site/` ke hosting statis.)
+Perintah utama setelah pengaturan sekali di GitHub: `mkdocs gh-deploy`.
 
 ## Status dokumen
 
@@ -49,11 +48,4 @@ mkdocs gh-deploy
 
 ## Repositori GitHub
 
-Setelah direview, dokumen ini dapat dipindahkan ke repositori publik terpisah (mis. `socx/api-docs`). Edit `repo_url` di `mkdocs.yml` agar tombol GitHub di header benar.
-
-### Paralel dengan organisasi DANA
-
-Organisasi [dana-id di GitHub](https://github.com/dana-id/) memisahkan **SDK** (`dana-node`) dan **dokumentasi API** terpisah. Untuk SOCX Anda bisa meniru pola itu:
-
-- Repo `socx-api-docs` — Markdown + MkDocs + GitHub Pages.
-- Repo integrasi klien (opsional) — SDK Node/PHP terpisah jika nanti dibutuhkan.
+Sesuaikan `repo_url` (dan opsional `site_url`) di `mkdocs.yml` agar tautan di header situs dan URL kanonik sesuai repositori Anda.

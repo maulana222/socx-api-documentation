@@ -82,8 +82,12 @@ Diagram dan skenario detail: [doc/transaksi-direct/contoh-respons-pulsa.md](doc/
 ├── mkdocs.yml                ← Konfigurasi situs dokumentasi (Material)
 ├── requirements-docs.txt     ← Dependensi Python untuk MkDocs
 ├── .gitignore                ← Mengabaikan site/, venv, dll.
+├── .github/
+│   └── workflows/
+│       └── deploy-docs.yml   ← Opsional: deploy otomatis ke gh-pages
 └── doc/                      ← Sumber Markdown (isi situs)
     ├── index.md              ← Beranda dokumentasi (daftar isi)
+    ├── deploy-github-pages.md
     ├── 01-pengenalan.md
     ├── 02-persiapan-integrasi.md
     ├── appendix-deposit-ticket.md
@@ -118,13 +122,25 @@ Buka browser ke **http://127.0.0.1:8000** — navigasi kiri, pencarian, dan peny
 mkdocs build
 ```
 
-Output di `site/` (tidak di-commit; ada di `.gitignore`). Unggah isi `site/` ke hosting statis atau gunakan:
+Output di `site/` (biasanya di `.gitignore`).
 
-```bash
-mkdocs gh-deploy
-```
+---
 
-untuk menerbitkan ke branch GitHub Pages (sesuaikan pengaturan repo & permission).
+## Deploy ke GitHub Pages (situs statis)
+
+Panduan **langkah demi langkah** (prasyarat, `mkdocs gh-deploy`, pengaturan *Settings → Pages*, URL publik, opsi GitHub Actions) ada di:
+
+**[doc/deploy-github-pages.md](doc/deploy-github-pages.md)**
+
+Ringkasan cepat:
+
+1. Dari root repo: `pip install -r requirements-docs.txt`
+2. Uji: `mkdocs build`
+3. Deploy: `mkdocs gh-deploy` (membuat/memperbarui branch **`gh-pages`**)
+4. Di GitHub: **Settings → Pages → Source** = branch **`gh-pages`**, folder **`/ (root)`**
+5. Buka: `https://<username>.github.io/<nama-repo>/` (tunggu beberapa menit setelah deploy pertama)
+
+Sesuaikan `site_url` di `mkdocs.yml` jika username atau nama repo berbeda.
 
 ---
 
@@ -135,6 +151,7 @@ untuk menerbitkan ke branch GitHub Pages (sesuaikan pengaturan repo & permission
 - [Contoh respons — pulsa](doc/transaksi-direct/contoh-respons-pulsa.md)
 - [Contoh respons — produk game](doc/transaksi-direct/contoh-respons-produk-game.md)
 - [Inquiry & katalog (menyusul)](doc/inquiry/README.md)
+- [Deploy ke GitHub Pages](doc/deploy-github-pages.md)
 
 ---
 
