@@ -27,8 +27,6 @@ sequenceDiagram
     Biller-->>SOCX: response (rc final, sn bila sukses)
     SOCX-->>Client: response final (rc=00 atau gagal)
   else SOCX tidak pending (langsung dapat rc final)
-    SOCX->>Biller: request topup / voucher (sesuai kategori game)
-    Biller-->>SOCX: response (rc, sn bila sukses)
     SOCX-->>Client: response purchase (rc=00 atau gagal)
   end
 ```
