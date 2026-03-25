@@ -4,6 +4,20 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 
 ---
 
+## Daftar isi cepat (tautan langsung)
+
+- [Ringkasan transaksi direct purchase](doc/transaksi-direct/README.md)
+- [Kode respons (RC) lengkap](doc/transaksi-direct/kode-respons.md)
+- [Contoh respons — pulsa](doc/transaksi-direct/contoh-respons-pulsa.md)
+- [Contoh respons — produk game](doc/transaksi-direct/contoh-respons-produk-game.md)
+- [Matriks klasifikasi produk game](doc/transaksi-direct/matriks-klasifikasi-produk-game.md)
+- [Inquiry — ringkasan](doc/inquiry/README.md)
+- [Inquiry POST (JSON), contoh PLN](doc/inquiry/inquiry-post.md)
+
+Beranda situs MkDocs dan tabel lengkap endpoint: [doc/index.md](doc/index.md).
+
+---
+
 ## Apa yang tercakup
 
 | Area | Status | Keterangan |
@@ -13,6 +27,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 | Cek status transaksi | Tersedia | `POST /status` |
 | Kode respons (RC) | Tersedia | Tabel lengkap sukses, gagal, pending |
 | Contoh respons pulsa & game | Tersedia | Skenario + interpretasi field |
+| Klasifikasi parameter game per `code` | Tersedia (template operasional) | Topup/voucher, butuh area/tidak, mapping ke `msisdn` |
 | Skenario pengujian | Tersedia | Checklist QA integrasi |
 | Deposit tiket | Lampiran | Di luar fokus direct purchase |
 | Inquiry (`POST /inquiry`) | Tersedia (contoh) | PLN prabayar `CPLN` — host demo/production di dokumen |
@@ -96,41 +111,11 @@ Diagram dan skenario detail: [doc/transaksi-direct/contoh-respons-pulsa.md](doc/
 
 ---
 
-## Cara membaca dokumentasi
-
-### Di GitHub (tanpa install)
-
-Buka file Markdown di folder [`doc/`](./doc/), mulai dari [`doc/index.md`](doc/index.md). Tautan antar-file relatif berfungsi di antarmuka GitHub.
-
-### Sebagai situs lokal (sidebar & pencarian)
-
-Membutuhkan Python 3.10+.
-
-```bash
-# Dari root repositori ini (folder yang berisi mkdocs.yml)
-pip install -r requirements-docs.txt
-mkdocs serve
-```
-
-Buka browser ke **http://127.0.0.1:8000** — navigasi kiri, pencarian, dan penyalinan blok kode didukung oleh [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
-
----
-
-## Konten per topik (tautan langsung)
-
-- [Ringkasan transaksi direct purchase](doc/transaksi-direct/README.md)
-- [Kode respons (RC) lengkap](doc/transaksi-direct/kode-respons.md)
-- [Contoh respons — pulsa](doc/transaksi-direct/contoh-respons-pulsa.md)
-- [Contoh respons — produk game](doc/transaksi-direct/contoh-respons-produk-game.md)
-- [Inquiry — ringkasan](doc/inquiry/README.md)
-- [Inquiry POST (JSON), contoh PLN](doc/inquiry/inquiry-post.md)
-
----
-
 ## Status & review
 
 - Materi utama diselaraskan dengan spesifikasi internal API H2H SOCX.
-- Bagian yang masih perlu **konfirmasi tim SOCX / API** antara lain: format error HTTP, URL sandbox, kontrak callback setelah pending, daftar kode produk resmi (terutama game), serta perluasan inquiry per produk selain contoh PLN.
+- Matriks klasifikasi produk game sudah disiapkan sebagai template operasional untuk handover integrator.
+- Bagian yang masih perlu **konfirmasi tim SOCX / API** antara lain: format error HTTP, URL sandbox, kontrak callback setelah pending, daftar kode produk resmi (terutama game), delimiter final format parameter game (jika butuh area), serta perluasan inquiry per produk selain contoh PLN.
 
 Saran kontribusi: kirim **Pull Request** untuk perbaikan teks, contoh request/response terbaru dari UAT, atau pengisian tabel SKU di halaman produk game setelah ada data resmi.
 
