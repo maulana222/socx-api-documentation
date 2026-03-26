@@ -369,8 +369,6 @@
       
         
       
-        
-      
     
     
     
@@ -630,34 +628,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../transaksi-direct/contoh-respons-produk-game/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Contoh respons — produk game
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../transaksi-direct/flow-inquiry-purchase/" class="md-nav__link">
         
   
@@ -693,7 +663,7 @@
   <span class="md-ellipsis">
     
   
-    Klasifikasi produk game
+    Klasifikasi & contoh respons produk game
   
 
     
@@ -924,6 +894,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#contoh-curl-production-dana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contoh cURL (production — DANA)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -940,6 +921,17 @@
   
     <nav class="md-nav" aria-label="Response sukses (contoh — rc: &#34;00&#34;)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-sukses-contoh-dana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response sukses (contoh — DANA)
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#field-response" class="md-nav__link">
@@ -1104,6 +1096,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#contoh-curl-production-dana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contoh cURL (production — DANA)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1120,6 +1123,17 @@
   
     <nav class="md-nav" aria-label="Response sukses (contoh — rc: &#34;00&#34;)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-sukses-contoh-dana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response sukses (contoh — DANA)
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#field-response" class="md-nav__link">
@@ -1281,6 +1295,12 @@
 <span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;code&quot;:&quot;CPLN&quot;,&quot;idpel&quot;:&quot;121021034831&quot;,&quot;request_id&quot;:&quot;250717000000&quot;}&#39;</span>
 </code></pre></div>
 <p>Ganti <code>YOUR_JWT_TOKEN</code> dengan token valid dari portal reseller.</p>
+<h3 id="contoh-curl-production-dana">Contoh cURL (production — DANA)<a class="headerlink" href="#contoh-curl-production-dana" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-L<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;http://indotechapi.socx.app/reseller/api/v1/inquiry&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Authorization: Bearer xxxx&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;code&quot;:&quot;DANA&quot;,&quot;idpel&quot;:&quot;08996647676#1000&quot;,&quot;request_id&quot;:&quot;26032600000&quot;}&#39;</span>
+</code></pre></div>
 <h2 id="response-sukses-contoh-rc-00">Response sukses (contoh — <code>rc: "00"</code>)<a class="headerlink" href="#response-sukses-contoh-rc-00" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CPLN&quot;</span><span class="p">,</span>
@@ -1302,6 +1322,24 @@
 <span class="w">  </span><span class="nt">&quot;admin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;balance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">29986594769</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="response-sukses-contoh-dana">Response sukses (contoh — <code>DANA</code>)<a class="headerlink" href="#response-sukses-contoh-dana" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DANA&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;idpel&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;08996647676#1000&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;26032600000&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;product_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DANA&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;client_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DNID aXX danX&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;info&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;rc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;msg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SUKSES&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;jumlah_tagihan&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;denda&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tagihan&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1000&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;admin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;60&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1060&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;balance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">29986574717</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="field-response">Field response<a class="headerlink" href="#field-response" title="Permanent link">&para;</a></h3>

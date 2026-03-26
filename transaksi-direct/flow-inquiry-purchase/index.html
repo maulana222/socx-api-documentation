@@ -13,7 +13,7 @@
       
       
       
-        <link rel="prev" href="../contoh-respons-produk-game/">
+        <link rel="prev" href="../contoh-respons-pulsa/">
       
       
         <link rel="next" href="../klasifikasi-produk-game/">
@@ -371,8 +371,6 @@
       
         
       
-        
-      
     
     
     
@@ -627,34 +625,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../contoh-respons-produk-game/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Contoh respons — produk game
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -751,7 +721,7 @@
   <span class="md-ellipsis">
     
   
-    Klasifikasi produk game
+    Klasifikasi & contoh respons produk game
   
 
     
@@ -993,17 +963,24 @@
 <h1 id="flow-inquiry-purchase-umum">Flow Inquiry &amp; Purchase (umum)<a class="headerlink" href="#flow-inquiry-purchase-umum" title="Permanent link">&para;</a></h1>
 <p>Diagram berikut menggambarkan alur sampai transaksi final untuk integrasi game.</p>
 <p>Request detail (payload) mengikuti kontrak SOCX/API untuk <code>code</code> game Anda.</p>
-<pre class="mermaid"><code>sequenceDiagram
+<p><pre class="mermaid"><code>sequenceDiagram
   autonumber
   participant Client as Client/Reseller
   participant Indotech as Indotech
   participant Biller as Game Provider
+
+  Client-&gt;&gt;Indotech: POST /inquiry (code, msisdn)
+  Indotech-&gt;&gt;Biller: request inquiry (jika dibutuhkan)
+  Biller--&gt;&gt;Indotech: response inquiry (info produk)
+  Indotech--&gt;&gt;Client: response inquiry (info produk)
 
   Client-&gt;&gt;Indotech: POST /purchase (code, msisdn, request_id)
   Indotech-&gt;&gt;Biller: request topup / voucher (sesuai kategori)
   Indotech--&gt;&gt;Client: response purchase (rc=68, pending)
   Biller--&gt;&gt;Indotech: response (sn bila sukses)
   Indotech--&gt;&gt;Client: response purchase (rc=00 atau gagal)</code></pre>
+/ End of Selection
+```</p>
 <h2 id="catatan">Catatan<a class="headerlink" href="#catatan" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Jika respons <code>rc=68</code>, transaksi dianggap <strong>pending</strong>.</li>
