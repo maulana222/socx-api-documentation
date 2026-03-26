@@ -18,24 +18,13 @@ Gunakan **menu kiri** untuk navigasi (situs ini dihasilkan dengan [MkDocs Materi
 | → [Cek status](transaksi-direct/cek-status.md) | `POST /status` |
 | → [Kode respons (RC)](transaksi-direct/kode-respons.md) | Tabel RC |
 | → [Contoh respons — pulsa](transaksi-direct/contoh-respons-pulsa.md) | Payload & respons spesifik pulsa |
-| → [Contoh respons — produk game](transaksi-direct/contoh-respons-produk-game.md) | Konvensi field & contoh (tanpa inquiry) |
-| → [Klasifikasi produk game](transaksi-direct/klasifikasi-produk-game.md) | Acuan per `code`: voucher, top-up non-zona, top-up zona; mapping `msisdn` |
+| → [Klasifikasi & contoh respons produk game](transaksi-direct/klasifikasi-produk-game.md) | Acuan per `code`, request, respons, dan mapping `msisdn` |
 | → [Skenario pengujian](transaksi-direct/skenario-pengujian.md) | Checklist QA integrasi |
 | [Inquiry](inquiry/README.md) | `POST /inquiry` — contoh PLN prabayar (`CPLN`) |
 | [Lampiran — deposit tiket](appendix-deposit-ticket.md) | Di luar direct purchase; dari spesifikasi sumber |
-
-## Jalankan dokumentasi secara lokal
-
-Dari **root repositori** ini (folder yang sama dengan `mkdocs.yml`):
-
-```bash
-pip install -r requirements-docs.txt
-mkdocs serve
-```
-
-Buka `http://127.0.0.1:8000` di browser.
 
 ## Status dokumen
 
 - **Siap dipakai untuk integrasi:** direct purchase (JSON/HTTP/XML), cek saldo, cek status, tabel RC — sesuai sumber internal `socx.md`.
 - **Perlu review tim SOCX / API:** callback setelah `rc = 68` (pending), verifikasi webhook/XML `topUpReport`, URL & kontrak **inquiry** / daftar harga, finalisasi parameter game per `code` di tabel klasifikasi.
+

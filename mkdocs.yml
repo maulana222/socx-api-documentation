@@ -70,9 +70,8 @@ nav:
       - Cek status: transaksi-direct/cek-status.md
       - Kode respons (RC): transaksi-direct/kode-respons.md
       - Contoh respons — pulsa: transaksi-direct/contoh-respons-pulsa.md
-      - Contoh respons — produk game: transaksi-direct/contoh-respons-produk-game.md
       - Flow inquiry & purchase (umum): transaksi-direct/flow-inquiry-purchase.md
-      - Klasifikasi produk game: transaksi-direct/klasifikasi-produk-game.md
+      - Klasifikasi & contoh respons produk game: transaksi-direct/klasifikasi-produk-game.md
       - Skenario pengujian: transaksi-direct/skenario-pengujian.md
   - Inquiry:
       - Ringkasan: inquiry/README.md

@@ -4,7 +4,7 @@ Repositori ini berisi **dokumentasi teknis** untuk integrasi **Host-to-Host (H2H
 
 ---
 
-## Daftar isi cepat (tautan langsung)
+## Daftar isi
 
 - [Ringkasan transaksi direct purchase](doc/transaksi-direct/README.md)
 - [Kode respons (RC) lengkap](doc/transaksi-direct/kode-respons.md)

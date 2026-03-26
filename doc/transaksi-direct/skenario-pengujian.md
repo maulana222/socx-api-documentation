@@ -46,7 +46,7 @@ Checklist untuk QA sebelum production. Sesuaikan dengan **sandbox** begitu URL &
 | ID | Skenario | Ekspektasi |
 |----|----------|------------|
 | G1 | Purchase pulsa dengan kode resmi sandbox | `sn` / `message` sesuai contoh [pulsa](./contoh-respons-pulsa.md) |
-| G2 | Purchase game dengan kode resmi sandbox (**TBD** kode) | `sn` mengikuti spesifikasi SKU di tabel [game](./contoh-respons-produk-game.md) |
+| G2 | Purchase game dengan kode resmi sandbox (**TBD** kode) | `sn` mengikuti spesifikasi SKU di tabel [game](./klasifikasi-produk-game.md) |
 
 ## 7. Callback / webhook (**TBD**)
 
@@ -69,3 +69,4 @@ Urutan minimal sebelum rilis integrasi:
 ---
 
 **Untuk owner:** serahkan dokumen ini ke tim API dengan pertanyaan terbuka: sandbox URL, format error HTTP, kontrak callback, dan daftar `code` untuk tabel pengujian G2.
+

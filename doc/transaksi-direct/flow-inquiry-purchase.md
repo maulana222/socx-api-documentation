@@ -11,11 +11,18 @@ sequenceDiagram
   participant Indotech as Indotech
   participant Biller as Game Provider
 
+  Client->>Indotech: POST /inquiry (code, msisdn)
+  Indotech->>Biller: request inquiry (jika dibutuhkan)
+  Biller-->>Indotech: response inquiry (info produk)
+  Indotech-->>Client: response inquiry (info produk)
+
   Client->>Indotech: POST /purchase (code, msisdn, request_id)
   Indotech->>Biller: request topup / voucher (sesuai kategori)
   Indotech-->>Client: response purchase (rc=68, pending)
   Biller-->>Indotech: response (sn bila sukses)
   Indotech-->>Client: response purchase (rc=00 atau gagal)
+```
+/ End of Selection
 ```
 
 ## Catatan

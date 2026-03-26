@@ -2,7 +2,7 @@
 
 Halaman ini menjadi acuan parameter transaksi per `code`. **Klasifikasi tidak cukup satu sumbu “topup vs voucher”** — dipakai pemisahan: **Voucher** (produk kode digital), **Top-up tanpa zona**, dan **Top-up dengan zona**, lalu mapping ke field **`msisdn`** di API purchase.
 
-Gunakan bersama [Contoh respons — produk game](./contoh-respons-produk-game.md) saat implementasi.
+Gunakan halaman ini sebagai acuan klasifikasi, request, dan respons produk game saat implementasi.
 
 Di API **SOCX purchase**, parameter game biasanya dimapping ke satu field **`msisdn`** sesuai **aturan per `code`** (delimiter dan urutan dari tim SOCX/API).
 
@@ -88,6 +88,112 @@ Voucher adalah kategori produk kode digital untuk redeem. Pada kategori ini:
 | code | nama | kategori | format `msisdn` | payload | contoh `msisdn` | `sn` (kode voucher sukses, `rc=00`) | status |
 |------|------|----------|-----------------|---------|-----------------|-----------------------------------------|--------|
 | `GPC5` | Google Play Rp 5.000 INDONESIA REGION Corporate | `VOUCHER` | nomor HP | `code`, `msisdn`, `request_id` | `081386467468` | `03GCXLDRDPPNBBEL` | Terverifikasi |
+
+## Contoh request & respons produk game
+
+### Request (JSON POST)
+
+#### 1) Voucher (`GPC5`)
+
+```json
+{
+  "code": "GPC5",
+  "msisdn": "081386467468",
+  "request_id": "km17l40myg3z51097"
+}
+```
+
+#### 2) Top-up non-zona (`CFF5`)
+
+```json
+{
+  "code": "CFF5",
+  "msisdn": "704899131",
+  "request_id": "eg45e10xpxge57760"
+}
+```
+
+#### 3) Top-up zona (`CML5`)
+
+```json
+{
+  "code": "CML5",
+  "msisdn": "4189395759887",
+  "request_id": "b624qp05nhnh52066"
+}
+```
+
+### Respons pending (`CML5`)
+
+```json
+{
+  "code": "CML5",
+  "msisdn": "4189395759887",
+  "request_id": "b624qp05nhnh52066",
+  "rc": "68",
+  "trxid": 2505577,
+  "price": 1440,
+  "balance": 83844592,
+  "message": "PENDING, Transaksi sedang diproses"
+}
+```
+
+### Respons sukses (contoh real)
+
+#### Voucher (`GPC5`)
+
+```json
+{
+  "ref_id": "km17l40myg3z51097",
+  "status": "1",
+  "code": "GPC5",
+  "hp": "081386467468",
+  "price": "4900",
+  "message": "Success",
+  "balance": "59412105",
+  "tr_id": "2209728",
+  "rc": "00",
+  "sn": "03GCXLDRDPPNBBEL"
+}
+```
+
+#### Top-up zona (`CML5`)
+
+```json
+{
+  "data": {
+    "ref_id": "b624qp05nhnh52066",
+    "status": "1",
+    "code": "CML5",
+    "hp": "4189395759887",
+    "price": "1440",
+    "message": "Success",
+    "balance": "83844592",
+    "tr_id": "2505577",
+    "rc": "00",
+    "sn": "ZIYECH. . RefId: CS774320333ZGVLM0U8VI"
+  }
+}
+```
+
+#### Top-up non-zona (`CFF5`)
+
+```json
+{
+  "data": {
+    "ref_id": "eg45e10xpxge57760",
+    "status": "1",
+    "code": "CFF5",
+    "hp": "704899131",
+    "price": "900",
+    "message": "Success",
+    "balance": "47269920",
+    "tr_id": "2434954",
+    "rc": "00",
+    "sn": "Free Fire 5 Diamonds /nickname : 死•ＩＲＦＡＮ•☠︎ refid: ab954b112f6c8aefbc6550167da150eb"
+  }
+}
+```
 
 ## Panduan pengisian cepat
 
